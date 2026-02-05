@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "main": ".open-next/worker.js",
-  "name": "portfolio.tristanmuller.workers.dev",
+  "name": "portfolio",
   "compatibility_date": "2026-02-05",
   "compatibility_flags": [
     "nodejs_compat"
