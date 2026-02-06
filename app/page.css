@@ -16,7 +16,7 @@
   width: 110%; /* Un peu plus large pour le mouvement */
   height: 110%; /* Un peu plus haute */
   background: url('vancouver-skyline.jpg') no-repeat center center/cover;
-  z-index: 1;
+  z-index: 0;
   will-change: transform; /* Optimisation pour le processeur graphique */
 }
 
@@ -25,6 +25,14 @@
   top: 0; left: 0; width: 100%; height: 100vh;
   background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, var(--background) 100%);
   z-index: 2;
+}
+
+.snow {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100vh;
+  z-index: 1;
+  background: url('snow.gif') repeat;
+  opacity: 0.4;
 }
 
 .hero-content {
@@ -43,22 +51,24 @@ hr {
   font-weight: 900;
   max-width: 800px;
   letter-spacing: 0.15em;
-  margin: 20px 0;
+  margin: 20px px;
+  line-height: 1.25;
   text-transform: uppercase;
+  box-sizing: border-box;
 }
 
 .hero-name {
-  font-size: clamp(3rem, 5vw, 6rem);
+  font-size: clamp(4rem, 6vw, 4.5rem);
   opacity: 0.8;
   font-family: "Libre Barcode 128 Text", system-ui;
 }
 
 .description {
   font-family: "Inter", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   opacity: 0.9;
-  margin: 0 20px;
+  margin: 0 30px;
 }
 
 .location-tag {
@@ -84,15 +94,17 @@ hr {
   opacity: 0.75;
   font-weight: bolder;
   user-select: none;
-  animation: popdown 2s infinite 2s;
+  animation: 2s ease-in 0s infinite alternate popdown;
 }
 
 @keyframes popdown {
   from {
     transform: translateY(0);
+    opacity: 0;
   }
 
   to {
-    transform: translateY(10px);
+    transform: translateY(15px);
+    opacity: 0.5;
   }
 }

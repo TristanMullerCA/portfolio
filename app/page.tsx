@@ -22,6 +22,7 @@ export default function Home() {
     <div>
       <header className="hero-section">
         <div className="overlay"></div>
+        <div className="snow"></div>
         <div className="background-image"></div>
 
         <div className="hero-content">
@@ -49,14 +50,6 @@ export default function Home() {
       </header>
 
       <main>
-        <br/>
-        <br/>
-        <br/>
-        <p className="description">
-          Bilingual Full-Stack Developer | M.Sc. in Computer Science<br />
-          Specializing in <strong>React, Node.js & 3D Visualization</strong>.<br />
-          <span className="location-tag">Relocating to Vancouver (Spring 2026) – Valid Work Permit (PVT) 🇨🇦</span>
-        </p>
       </main>
     </div>
   );
