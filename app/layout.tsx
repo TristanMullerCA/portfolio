@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Libre_Barcode_128_Text } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,6 +11,8 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+// const libreBarcode128Text = Libre_Barcode_128_Text( {weight: "400" });
 
 export const metadata: Metadata = {
   title: "Tristan MULLER - FullStack Developer",
