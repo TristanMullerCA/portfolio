@@ -3,6 +3,7 @@
 import Image from "next/image";
 import "./page.css"
 import { useEffect } from "react";
+import echoMockup from "./echo_mockup.png";
 
 export default function Home() {
   useEffect(() => {
@@ -20,6 +21,10 @@ export default function Home() {
 
   return (
     <div>
+      <div className="resume">
+        <a href="/resume.pdf" download="Tristan MULLER - Resume.pdf">Download resume</a>
+      </div>
+
       <header className="hero-section">
         <div className="overlay"></div>
         <div className="snow"></div>
@@ -49,7 +54,15 @@ export default function Home() {
         </div>
       </header>
 
-      <main>
+      <main className="content">
+        <div className="project">
+          <div className="background"></div>
+          <h2>Project</h2>
+          <h1>ECHO</h1>
+          <h3>An IpConnect product</h3>
+          <p>A powerful softphone designed for support and high performance 📞</p>
+          <Image src={echoMockup} alt="" />
+        </div>
       </main>
     </div>
   );
