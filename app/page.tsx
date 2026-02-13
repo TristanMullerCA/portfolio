@@ -4,6 +4,7 @@ import Image from "next/image";
 import "./page.css"
 import { useEffect } from "react";
 import echoMockup from "./echo_mockup.png";
+import Cards from "./Cards";
 
 export default function Home() {
   useEffect(() => {
@@ -62,6 +63,11 @@ export default function Home() {
           <h3>An IpConnect product</h3>
           <p>A powerful softphone designed for support and high performance 📞</p>
           <Image src={echoMockup} alt="" />
+          <Cards height={150} cards={[
+            "Bridging the gap between web flexibility and native performance: A high-performance Softphone built with React and Tauri.",
+            "Engineered a lightweight, secure VoIP solution leveraging WebRTC and the memory-safety of Rust via Tauri.",
+            "Reinventing real-time communication: Building a low-latency desktop softphone designed for seamless enterprise connectivity",
+            ]} />
         </div>
       </main>
     </div>
